@@ -57,7 +57,7 @@ func (room *Room) waitForGuessesAndHandleGameOver(gameServer *GameServer) {
 			*/
 
 		// 20 seconds have passed
-		case <-time.After(10 * time.Second):
+		case <-time.After(20 * time.Second):
 			room.handleGameOver()
 			return
 		}

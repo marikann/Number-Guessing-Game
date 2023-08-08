@@ -95,7 +95,7 @@ func (gs *GameServer) handleWebSocketCommand(conn *websocket.Conn, command *mode
 }
 
 func (gs *GameServer) MatchMake() {
-	interval := 5 * time.Second
+	interval := 30 * time.Second
 	ticker := time.Tick(interval)
 
 	for range ticker {
