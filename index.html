@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayı Tahmin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container" id="container">
+    <h1>Sayı Tahmin Etme Oyununa Hoş Geldiniz!</h1>
+    <div class="form">
+        <input type="text" placeholder="Nickname" id="nickname">
+        <button type="button" id="join-button" onclick="joinGame()">Oda Ara!</button>
+        <div class="loading" id="loading">
+            <div class="loader"></div>
+            <p>Oda Aranıyor...</p>
+        </div>
+        <p id="nickname-error" style="display: none; color: red;">Nickname alanı boş olamaz!</p>
+    </div>
+</div>
+
+<div id="welcome-container" style="display: none;">
+    <h2>Odaya hoş geldiniz!</h2>
+    <input type="number" id="guess" placeholder="Tahmininizi girin...">
+    <button onclick="guess()">Tahmini Gönder</button>
+</div>
+
+<!-- Oyun Bitti Ekranı -->
+<div id="game-over-container" style="display: none;">
+    <h2>Oyun Bitti!</h2>
+    <img src="trophy.jpg" alt="Kupa" class="trophy">
+    <p id="kazanma-mesaji"></p>
+    <p id="kazanma-sirasi"></p>
+    <button id="new-game-button" onclick="joinGame2()">Yeni Oyuna Başla</button>
+    <div class="loading" id="new-game-loading" style="display: none;">
+        <div class="loader"></div>
+        <p>Oda Aranıyor...</p>
+    </div>
+</div>
+
+<script src="scripts.js"></script>
+</body>
+</html>
